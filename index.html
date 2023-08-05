@@ -47,9 +47,13 @@
     }
 
     .letter {
+        position: relative;
         display: none;
+        width: auto;
+        height: 1vh;
     }
 
+    
     .imageBox .closed{
         transition: .5s ease;
     }
@@ -67,17 +71,15 @@
     }
 
     .transform3{
-        transition: 1s ease;
+        transition: 2s ease;
         opacity: 1;
     }
 
     .transform4 {
-        position: relative;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-content: center;
-        width: auto;
         opacity: 0;
     }
 
@@ -94,8 +96,11 @@
     <div class="imageBox" id="imageBox">
         <img class="closed" src="closed.png" style="width:100%;height:100%" id="closed">
         <img class="open" src="open.png" style="width: 100%; height:100%" id="open" onclick="trans()">
+        <img class="letter" src="ltr.png" style="width:100%;height:100%" id="letter" />
     </div>
-    <img class="letter" src="ltr.png" style="width:30%;height:90%" id="letter" />
+    
+    
+   
     
 </body>
 </html>
@@ -105,7 +110,8 @@
         document.getElementById("closed").classList = 'transform2'
         document.getElementById("open").classList = 'transform'
         setTimeout(function () {
-            document.getElementById("imageBox").classList = 'transform5'
+            document.getElementById("closed").classList = 'transform5'
+            document.getElementById("open").classList = 'transform5'
             document.getElementById("letter").classList = 'transform4'
             setTimeout(function () {
                 document.getElementById("letter").classList = 'transform3'
