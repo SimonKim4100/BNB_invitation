@@ -50,7 +50,6 @@
         position: relative;
         display: none;
         width: auto;
-        height: 1vh;
     }
 
     
@@ -71,7 +70,7 @@
     }
 
     .transform3{
-        transition: 2s ease;
+        transition: 1s ease;
         opacity: 1;
     }
 
@@ -99,9 +98,6 @@
         <img class="letter" src="ltr.png" style="width:100%;height:100%" id="letter" />
     </div>
     
-    
-   
-    
 </body>
 </html>
 
@@ -115,7 +111,7 @@
             document.getElementById("letter").classList = 'transform4'
             setTimeout(function () {
                 document.getElementById("letter").classList = 'transform3'
-            }, 100);
-        }, 1000);
+            }, 10);
+        }, 500);
     }
 </script>
