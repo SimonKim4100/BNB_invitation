@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>BNB_invitation</title>
 
+    <meta property="og:title" content="2023 드림이 집회 초대">
+    <meta property="og:description" content="여러분들을 예수님의 품으로 초대합니다 ♥">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://dreamee-invitation23.vercel.app">
+    <meta property="og:image" content="https://dreamee-invitation23.vercel.app/ltr.png">
 <style>
 
     body{
@@ -19,7 +24,7 @@
         justify-content: center;
         align-items: center;
     }
-    
+
     .imageBox{
         position: relative;
         display: flex;
@@ -52,7 +57,7 @@
         width: auto;
     }
 
-    
+
     .imageBox .closed{
         transition: .5s ease;
     }
@@ -93,14 +98,21 @@
 <body>
     <div class="imageBox" id="imageBox">
         <img class="closed" src="closed.png" style="width:100%;height:100%" id="closed">
-        <img class="open" src="open.png" style="width: 100%; height:100%" id="open" onclick="trans()">
+        <img class="open" src="open.png" style="width: 100%; height:100%" id="open">
         <img class="letter" src="ltr.png" style="width:100%;height:100%" id="letter" />
     </div>
-    
+
 </body>
 </html>
 
 <script>
+
+    const openImg = document.getElementById("open")
+
+    openImg.addEventListener("click",() => {
+        trans();
+    })
+
     function trans() {
         document.getElementById("closed").classList = 'transform2'
         document.getElementById("open").classList = 'transform'
@@ -113,4 +125,5 @@
             }, 10);
         },10);
     }
+
 </script>
